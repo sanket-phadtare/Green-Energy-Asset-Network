@@ -1,0 +1,8 @@
+CREATE TABLE farmers (id SERIAL PRIMARY KEY, name TEXT NOT NULL, wallet_address TEXT NOT NULL, created_at TIMESTAMP WITH TIME ZONE DEFAULT now());
+
+CREATE TABLE meter_readings (id SERIAL PRIMARY KEY, farmer_id INTEGER REFERENCES farmers(id), meter_id TEXT, kwh NUMERIC NOT NULL,ts TIMESTAMP WITH TIME ZONE NOT NULL, source TEXT, status TEXT DEFAULT 'pending', created_at TIMESTAMP WITH TIME ZONE DEFAULT now());
+
+
+CREATE TABLE attestations (id SERIAL PRIMARY KEY, reading_id INTEGER REFERENCES meter_readings(id), attestor_address TEXT, ipfs_cid TEXT, attestation_json JSONB, signature TEXT, created_at TIMESTAMP WITH TIME ZONE DEFAULT now());
+
+CREATE TABLE assets (id SERIAL PRIMARY KEY, farmer_id INTEGER REFERENCES farmers(id), attestation_id INTEGER REFERENCES attestations(id), txn_hash TEXT, certificate_id TEXT, kwh NUMERIC, created_at TIMESTAMP WITH TIME ZONE DEFAULT now());

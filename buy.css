@@ -1,0 +1,91 @@
+/* style.css */
+
+/* ---------------- Global Styles ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  color: #1f2937;
+  line-height: 1.6;
+  padding: 1rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #16a34a;
+  margin-bottom: 2rem;
+}
+
+/* ---------------- Farmers Container ---------------- */
+#farmersContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  padding: 1rem;
+}
+
+/* ---------------- Farmer Card ---------------- */
+.farmer-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 220px;
+}
+
+.farmer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.farmer-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.farmer-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
+/* ---------------- Buttons ---------------- */
+.farmer-card button {
+  background: #22c55e;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.farmer-card button:hover {
+  background: #16a34a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.farmer-card button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 480px) {
+  #farmersContainer {
+    grid-template-columns: 1fr;
+  }
+}

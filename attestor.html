@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attestor Dashboard</title>
+<link rel="stylesheet" href="attest.css">
+</head>
+<body>
+<header>
+  <h1>Attestor Dashboard</h1>
+  <button onclick="window.location.href='index.html'">Home</button>
+</header>
+
+<main>
+<!-- Verify Reading -->
+<section class="card">
+  <h2>Verify Reading</h2>
+  <form id="verifyForm">
+    <input type="number" id="readingId" placeholder="Reading ID" required>
+    <input type="text" id="verifierNotes" placeholder="Verifier Notes">
+    <button type="submit">Verify</button>
+  </form>
+</section>
+
+<!-- Mint Certificate -->
+<section class="card">
+  <h2>Mint Certificate</h2>
+  <form id="mintForm">
+    <input type="number" id="attestationId" placeholder="Attestation ID" required>
+    <input type="text" id="mintTo" placeholder="Recipient Wallet Address" required>
+    <button type="submit">Mint</button>
+  </form>
+</section>
+
+<!-- All Assets -->
+<section class="card">
+  <h2>All Assets</h2>
+  <button id="loadAssets">Load Assets</button>
+  <table id="assetsTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Farmer ID</th>
+        <th>Certificate</th>
+        <th>KWH</th>
+        <th>Txn Hash</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

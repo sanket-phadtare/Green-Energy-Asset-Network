@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Green Energy Asset Network</title>
+  <link href="index.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <h1>Green Energy Asset Network</h1>
+        <p class="tagline">Tokenize green energy • Trade • Earn • Monitor</p>
+      </div>
+
+      
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Stats -->
+    <section class="stats-grid" aria-label="Key Stats">
+      <article class="stat-card">
+        <h2 class="stat-title">Total Energy</h2>
+        <p class="stat-value">2500 kWh</p>
+      </article>
+      <article class="stat-card">
+        <h2 class="stat-title">CO₂ Avoided</h2>
+        <p class="stat-value">1750 kg</p>
+      </article>
+      <article class="stat-card">
+        <h2 class="stat-title">Users</h2>
+        <p class="stat-value">45</p>
+      </article>
+      <article class="stat-card">
+        <h2 class="stat-title">Companies</h2>
+        <p class="stat-value">12</p>
+      </article>
+    </section>
+
+    <!-- Logins -->
+    <section class="login-grid" aria-label="Login Options">
+      <button class="btn" data-login="farmer">Login as User</button>
+      <button class="btn" data-login="company">Login as Company</button>
+      <button class="btn" data-login="government">Login as Government</button>
+      <button class="btn" data-login="attester">Login as Attester</button>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <small>© 2025 Green Energy Marketplace DoT Aptos Hackathon</small>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.chip').forEach(button => {
+      button.addEventListener('click', () => {
+        const action = button.getAttribute('data-action');
+        if(action === 'farmer') window.location.href = 'farmers.html';
+        else if(action === 'company') window.location.href = 'mint.html';
+        else if(action === 'government') window.location.href = 'attestor.html';
+        else if(action === 'attester') window.location.href = 'attestor.html';
+        else if(action === 'home') window.location.href = 'index.html';
+      });
+    });
+
+    document.querySelectorAll('.btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const login = button.getAttribute('data-login');
+        if(login === 'farmer') window.location.href = 'farmers.html';
+        else if(login === 'company') window.location.href = 'company.html';
+        else if(login === 'government') window.location.href = '';
+        else if(login === 'attester') window.location.href = 'attestor.html';
+      });
+    });
+  </script>
+</body>
+</html>

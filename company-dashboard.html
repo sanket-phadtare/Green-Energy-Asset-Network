@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Company Dashboard</title>
+<link rel="stylesheet" href="cmp_da.css">
+</head>
+<body>
+<header>
+  <h1>Company Dashboard</h1>
+  <button onclick="window.location.href='index.html'">Home</button>
+</header>
+
+<main>
+<section class="card">
+  <h2>Company Details</h2>
+  <div id="companyDetails">
+    <!-- Company info will be rendered here -->
+  </div>
+</section>
+
+<section class="card">
+  <h2>All Certificates</h2>
+  <button id="loadCompanyAssets">Load Certificates</button>
+  <table id="companyAssetsTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Farmer ID</th>
+        <th>Certificate</th>
+        <th>KWH</th>
+        <th>Txn Hash</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

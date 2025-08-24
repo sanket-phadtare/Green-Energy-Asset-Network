@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Company Dashboard</title>
+<link rel="stylesheet" href="company.css" />
+</head>
+<body>
+  <h1>Company Portal</h1>
+
+  <!-- Register -->
+  <section id="registerSection">
+    <h2>Register</h2>
+    <form id="companyRegisterForm">
+      <input type="text" id="regName" placeholder="Company Name" required />
+      <input type="email" id="regEmail" placeholder="Email" required />
+      <input type="password" id="regPassword" placeholder="Password" required />
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+  <!-- Login -->
+  <section id="loginSection">
+    <h2>Login</h2>
+    <form id="companyLoginForm">
+      <input type="email" id="loginEmail" placeholder="Email" required />
+      <input type="password" id="loginPassword" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+  </section>
+
+  <!-- Dashboard -->
+  <section id="dashboardSection" style="display:none;">
+    <h2>Company Dashboard</h2>
+    <p id="companyDetails"></p>
+    
+    <button id="buyCertificatesBtn">Buy Certificates/Tokens</button>
+
+    <h3>All Certificates</h3>
+    <table id="certTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Farmer ID</th>
+          <th>Certificate</th>
+          <th>KWH</th>
+          <th>Txn Hash</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

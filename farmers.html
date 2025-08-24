@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farmer Dashboard</title>
+<link rel="stylesheet" href="farmer.css">
+</head>
+<body>
+<header>
+  <h1>User Dashboard</h1>
+  <button onclick="window.location.href='index.html'">Home</button>
+</header>
+
+<main>
+<section class="card">
+  <h2>Register User</h2>
+  <form id="farmerForm">
+    <input type="text" id="farmerName" placeholder="Farmer Name" required>
+    <button type="submit">Register</button>
+  </form>
+</section>
+
+<section class="card">
+  <h2>Submit Reading</h2>
+  <form id="readingForm">
+    <input type="number" id="farmerId" placeholder="Farmer ID" required>
+    <input type="number" id="kwh" placeholder="KWH" required>
+    <input type="text" id="meterId" placeholder="Meter ID (optional)">
+    <input type="datetime-local" id="timestamp" required>
+    <button type="submit">Submit</button>
+  </form>
+</section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
